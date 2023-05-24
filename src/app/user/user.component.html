@@ -1,0 +1,42 @@
+<div>
+    <fieldset>
+        <label for="username">Username:
+            <input type="text" [formControl]="username">
+        </label>
+    </fieldset>
+    <fieldset>
+        <label for="email">email:
+            <input type="email" [formControl]="email">
+        </label>
+    </fieldset>
+    <fieldset>
+        <label for="password">password:
+            <input type="password" [formControl]="password">
+        </label>
+    </fieldset>
+    <fieldset>
+        <label for="rue">rue:
+            <input type="text" [formControl]="rue">
+        </label>
+    </fieldset>
+    <fieldset>
+        <label for="cp">cp:
+            <input type="text" [formControl]="cp">
+        </label>
+    </fieldset>
+    <fieldset>
+        <label for="ville">ville:
+            <input type="text" [formControl]="ville">
+        </label>
+    </fieldset>
+    <button type="submit" (click)="createNewUser()">inscription</button>
+</div>
+<div *ngIf="submit">
+    <p>{{user.username}}</p>
+    <p>{{user.email}}</p>
+    <p>{{user.password}}</p>
+    <p>{{user.rue}}</p>
+    <p>{{user.cp}}</p>
+    <p>{{user.ville}}</p>
+
+</div>
